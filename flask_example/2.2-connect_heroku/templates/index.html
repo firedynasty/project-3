@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Hot Finds</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <style>
+ 
+    td {
+           width: 150px;
+           text-align: center;
+           border: 1px solid black;
+           padding: 5px;
+         }
+   </style>
+</head>
+<body>
+
+<div class="container">
+<div class="jumbotron text-center">
+<h1>Hot Finds On Craigslist</h1>
+<p><a class="btn btn-primary btn-lg" href="/addition" role="button">Find An Awesome Deal!</a></p>
+</div>
+    
+
+<table>
+  <thead>
+    <tr>
+        <th>vehicle ID</th>
+        <th>current timestamp</th>
+        <th>expiry timestamp</th>
+    </tr>
+    </thead>    
+    <tbody>
+     {% for row in data %}    
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</body>
+</html>
